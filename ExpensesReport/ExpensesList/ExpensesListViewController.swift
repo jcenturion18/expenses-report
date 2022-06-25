@@ -40,8 +40,8 @@ class ExpensesListViewController: UIViewController {
     }
 
     func bindingViewModel() {
-        viewModel.bindViewModelToController = { expesesData in
-            print(expesesData)
+        viewModel.bindViewModelToController = { expeses in
+            print(expeses)
         }
     }
 }

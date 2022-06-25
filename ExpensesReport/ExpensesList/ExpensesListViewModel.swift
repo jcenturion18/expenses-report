@@ -9,15 +9,15 @@ import Foundation
 
 class ExpensesListViewModel {
 
-    private(set) var expensesData: ExpensesData! {
+    private(set) var expenses: Expenses! {
         didSet {
-            bindViewModelToController(expensesData)
+            bindViewModelToController(expenses)
         }
     }
 
-    var bindViewModelToController : ((_ expensesData: ExpensesData) -> Void) = {_ in }
+    var bindViewModelToController : ((_ expenses: Expenses) -> Void) = {_ in }
 
     func loadExpensesData() {
-        expensesData = ExpensesData()
+        expenses = Expenses()
     }
 }

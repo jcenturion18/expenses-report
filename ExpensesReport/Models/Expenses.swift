@@ -7,4 +7,6 @@
 
 import Foundation
 
-struct ExpensesData {}
+struct Expenses {
+
+}
