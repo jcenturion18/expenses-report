@@ -18,6 +18,7 @@
 		6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992302867997D00AC033B /* ExpensesListViewController.swift */; };
 		6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992312867997D00AC033B /* ExpensesListViewController.xib */; };
 		6D6992362867A4E900AC033B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992352867A4E900AC033B /* UIView.swift */; };
+		6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6D6992302867997D00AC033B /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
 		6D6992312867997D00AC033B /* ExpensesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesListViewController.xib; sourceTree = "<group>"; };
 		6D6992352867A4E900AC033B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				6D6992302867997D00AC033B /* ExpensesListViewController.swift */,
 				6D6992312867997D00AC033B /* ExpensesListViewController.xib */,
+				6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */,
 			);
 			path = ExpensesList;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6992362867A4E900AC033B /* UIView.swift in Sources */,
+				6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */,
 				6D6991FD2867826900AC033B /* ViewController.swift in Sources */,
 				6D6991F92867826800AC033B /* AppDelegate.swift in Sources */,
 				6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */,
