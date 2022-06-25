@@ -15,6 +15,9 @@
 		6D6992102867826B00AC033B /* ExpensesReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69920F2867826B00AC033B /* ExpensesReportTests.swift */; };
 		6D69921A2867826B00AC033B /* ExpensesReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992192867826B00AC033B /* ExpensesReportUITests.swift */; };
 		6D69921C2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */; };
+		6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992302867997D00AC033B /* ExpensesListViewController.swift */; };
+		6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992312867997D00AC033B /* ExpensesListViewController.xib */; };
+		6D6992362867A4E900AC033B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992352867A4E900AC033B /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		6D6992152867826B00AC033B /* ExpensesReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6992192867826B00AC033B /* ExpensesReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesReportUITests.swift; sourceTree = "<group>"; };
 		6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesReportUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6D6992302867997D00AC033B /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
+		6D6992312867997D00AC033B /* ExpensesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesListViewController.xib; sourceTree = "<group>"; };
+		6D6992352867A4E900AC033B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 		6D6991F72867826800AC033B /* ExpensesReport */ = {
 			isa = PBXGroup;
 			children = (
+				6D6992342867A4D900AC033B /* Extensions */,
+				6D69922F2867992400AC033B /* ExpensesList */,
 				6D6991F82867826800AC033B /* AppDelegate.swift */,
 				6D6991FA2867826800AC033B /* SceneDelegate.swift */,
 				6D6991FC2867826800AC033B /* ViewController.swift */,
@@ -122,6 +130,23 @@
 				6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */,
 			);
 			path = ExpensesReportUITests;
+			sourceTree = "<group>";
+		};
+		6D69922F2867992400AC033B /* ExpensesList */ = {
+			isa = PBXGroup;
+			children = (
+				6D6992302867997D00AC033B /* ExpensesListViewController.swift */,
+				6D6992312867997D00AC033B /* ExpensesListViewController.xib */,
+			);
+			path = ExpensesList;
+			sourceTree = "<group>";
+		};
+		6D6992342867A4D900AC033B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D6992352867A4E900AC033B /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */,
 				6D6992052867826A00AC033B /* LaunchScreen.storyboard in Resources */,
 				6D6992022867826A00AC033B /* Assets.xcassets in Resources */,
 			);
@@ -254,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6992362867A4E900AC033B /* UIView.swift in Sources */,
 				6D6991FD2867826900AC033B /* ViewController.swift in Sources */,
 				6D6991F92867826800AC033B /* AppDelegate.swift in Sources */,
+				6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */,
 				6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
