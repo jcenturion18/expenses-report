@@ -18,6 +18,10 @@ class ExpensesListViewModel {
     var bindViewModelToController : ((_ expenses: Expenses) -> Void) = {_ in }
 
     func loadExpensesData() {
-        expenses = Expenses()
+        expenses = Expenses(expenses:
+                                [
+                                    Expense(description: "Coffee", date: Date.now, amount: 7, transaction: .expense)
+                                ]
+        )
     }
 }
