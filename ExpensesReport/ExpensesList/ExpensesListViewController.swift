@@ -31,15 +31,15 @@ class ExpensesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBalanceView()
-        bindingViewModel()
-        viewModel.loadExpensesData()
+        observeChanges()
+        viewModel.loadExpensesData() // TODO: This must be done by DB
     }
 
     func setUpBalanceView() {
         balanceBackgroundView.rondedView()
     }
 
-    func bindingViewModel() {
+    func observeChanges() {
         viewModel.bindViewModelToController = { expeses in
             print(expeses)
         }
