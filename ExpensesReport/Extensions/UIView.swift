@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
+
     func rondedView() {
         backgroundColor = .white
         layer.cornerRadius = 6
