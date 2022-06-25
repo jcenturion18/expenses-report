@@ -10,11 +10,13 @@ struct ExpensesData {}
 
 class ExpensesListViewModel {
 
-    private(set) var expensesData: ExpensesData!
-
-    init() {
-        loadExpensesData()
+    private(set) var expensesData: ExpensesData! {
+        didSet {
+            bindViewModelToController(expensesData)
+        }
     }
+
+    var bindViewModelToController : ((_ expensesData: ExpensesData) -> Void) = {_ in }
 
     func loadExpensesData() {
         expensesData = ExpensesData()
