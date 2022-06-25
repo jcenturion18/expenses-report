@@ -6,7 +6,6 @@
 //
 
 import Foundation
-struct ExpensesData {}
 
 class ExpensesListViewModel {
 
