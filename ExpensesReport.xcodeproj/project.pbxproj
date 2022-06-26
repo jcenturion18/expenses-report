@@ -21,6 +21,9 @@
 		6D6992422867F8C500AC033B /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992412867F8C500AC033B /* Float.swift */; };
 		6D6992452867FAE600AC033B /* FloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992442867FAE600AC033B /* FloatTests.swift */; };
 		6D699247286802D100AC033B /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699246286802D100AC033B /* UIViewTests.swift */; };
+		6D69924928680F6000AC033B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924828680F6000AC033B /* Array.swift */; };
+		6D69924B2868127500AC033B /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924A2868127500AC033B /* Dictionary.swift */; };
+		6D69924D286812A100AC033B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924C286812A100AC033B /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		6D6992412867F8C500AC033B /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		6D6992442867FAE600AC033B /* FloatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatTests.swift; sourceTree = "<group>"; };
 		6D699246286802D100AC033B /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
+		6D69924828680F6000AC033B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		6D69924A2868127500AC033B /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		6D69924C286812A100AC033B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 			children = (
 				6D6992352867A4E900AC033B /* UIView.swift */,
 				6D6992412867F8C500AC033B /* Float.swift */,
+				6D69924828680F6000AC033B /* Array.swift */,
+				6D69924A2868127500AC033B /* Dictionary.swift */,
+				6D69924C286812A100AC033B /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,12 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D69924928680F6000AC033B /* Array.swift in Sources */,
+				6D69924B2868127500AC033B /* Dictionary.swift in Sources */,
 				6D6992362867A4E900AC033B /* UIView.swift in Sources */,
 				6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */,
 				6D6991FD2867826900AC033B /* ViewController.swift in Sources */,
 				6D6991F92867826800AC033B /* AppDelegate.swift in Sources */,
 				6D6992422867F8C500AC033B /* Float.swift in Sources */,
 				6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */,
+				6D69924D286812A100AC033B /* Date.swift in Sources */,
 				6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */,
 				6D69923B2867B45C00AC033B /* Expenses.swift in Sources */,
 			);
