@@ -12,25 +12,18 @@
 		6D6991FD2867826900AC033B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6991FC2867826800AC033B /* ViewController.swift */; };
 		6D6992022867826A00AC033B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992012867826A00AC033B /* Assets.xcassets */; };
 		6D6992052867826A00AC033B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992032867826A00AC033B /* LaunchScreen.storyboard */; };
-		6D6992102867826B00AC033B /* ExpensesReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69920F2867826B00AC033B /* ExpensesReportTests.swift */; };
-		6D69921A2867826B00AC033B /* ExpensesReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992192867826B00AC033B /* ExpensesReportUITests.swift */; };
-		6D69921C2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */; };
 		6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992302867997D00AC033B /* ExpensesListViewController.swift */; };
 		6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992312867997D00AC033B /* ExpensesListViewController.xib */; };
 		6D6992362867A4E900AC033B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992352867A4E900AC033B /* UIView.swift */; };
 		6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */; };
 		6D69923B2867B45C00AC033B /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69923A2867B45C00AC033B /* Expenses.swift */; };
+		6D69923E2867F3BB00AC033B /* ExpensesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69923D2867F3BB00AC033B /* ExpensesTests.swift */; };
+		6D6992422867F8C500AC033B /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992412867F8C500AC033B /* Float.swift */; };
+		6D6992452867FAE600AC033B /* FloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992442867FAE600AC033B /* FloatTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		6D69920C2867826B00AC033B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6D6991ED2867826800AC033B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6D6991F42867826800AC033B;
-			remoteInfo = ExpensesReport;
-		};
-		6D6992162867826B00AC033B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6D6991ED2867826800AC033B /* Project object */;
 			proxyType = 1;
@@ -48,15 +41,14 @@
 		6D6992042867826A00AC033B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D6992062867826A00AC033B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D69920B2867826B00AC033B /* ExpensesReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D69920F2867826B00AC033B /* ExpensesReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesReportTests.swift; sourceTree = "<group>"; };
-		6D6992152867826B00AC033B /* ExpensesReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D6992192867826B00AC033B /* ExpensesReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesReportUITests.swift; sourceTree = "<group>"; };
-		6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesReportUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6D6992302867997D00AC033B /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
 		6D6992312867997D00AC033B /* ExpensesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesListViewController.xib; sourceTree = "<group>"; };
 		6D6992352867A4E900AC033B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewModel.swift; sourceTree = "<group>"; };
 		6D69923A2867B45C00AC033B /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		6D69923D2867F3BB00AC033B /* ExpensesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTests.swift; sourceTree = "<group>"; };
+		6D6992412867F8C500AC033B /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		6D6992442867FAE600AC033B /* FloatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D6992122867826B00AC033B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,7 +74,6 @@
 			children = (
 				6D6991F72867826800AC033B /* ExpensesReport */,
 				6D69920E2867826B00AC033B /* ExpensesReportTests */,
-				6D6992182867826B00AC033B /* ExpensesReportUITests */,
 				6D6991F62867826800AC033B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +83,6 @@
 			children = (
 				6D6991F52867826800AC033B /* ExpensesReport.app */,
 				6D69920B2867826B00AC033B /* ExpensesReportTests.xctest */,
-				6D6992152867826B00AC033B /* ExpensesReportUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,18 +106,10 @@
 		6D69920E2867826B00AC033B /* ExpensesReportTests */ = {
 			isa = PBXGroup;
 			children = (
-				6D69920F2867826B00AC033B /* ExpensesReportTests.swift */,
+				6D6992432867FAD600AC033B /* Extensions */,
+				6D69923C2867F3A300AC033B /* Models */,
 			);
 			path = ExpensesReportTests;
-			sourceTree = "<group>";
-		};
-		6D6992182867826B00AC033B /* ExpensesReportUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6D6992192867826B00AC033B /* ExpensesReportUITests.swift */,
-				6D69921B2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift */,
-			);
-			path = ExpensesReportUITests;
 			sourceTree = "<group>";
 		};
 		6D69922F2867992400AC033B /* ExpensesList */ = {
@@ -151,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				6D6992352867A4E900AC033B /* UIView.swift */,
+				6D6992412867F8C500AC033B /* Float.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +137,22 @@
 				6D69923A2867B45C00AC033B /* Expenses.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6D69923C2867F3A300AC033B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D69923D2867F3BB00AC033B /* ExpensesTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D6992432867FAD600AC033B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D6992442867FAE600AC033B /* FloatTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,24 +193,6 @@
 			productReference = 6D69920B2867826B00AC033B /* ExpensesReportTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6D6992142867826B00AC033B /* ExpensesReportUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D6992252867826B00AC033B /* Build configuration list for PBXNativeTarget "ExpensesReportUITests" */;
-			buildPhases = (
-				6D6992112867826B00AC033B /* Sources */,
-				6D6992122867826B00AC033B /* Frameworks */,
-				6D6992132867826B00AC033B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6D6992172867826B00AC033B /* PBXTargetDependency */,
-			);
-			name = ExpensesReportUITests;
-			productName = ExpensesReportUITests;
-			productReference = 6D6992152867826B00AC033B /* ExpensesReportUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,10 +207,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					6D69920A2867826B00AC033B = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 6D6991F42867826800AC033B;
-					};
-					6D6992142867826B00AC033B = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 6D6991F42867826800AC033B;
 					};
@@ -257,7 +227,6 @@
 			targets = (
 				6D6991F42867826800AC033B /* ExpensesReport */,
 				6D69920A2867826B00AC033B /* ExpensesReportTests */,
-				6D6992142867826B00AC033B /* ExpensesReportUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,13 +249,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D6992132867826B00AC033B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -298,6 +260,7 @@
 				6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */,
 				6D6991FD2867826900AC033B /* ViewController.swift in Sources */,
 				6D6991F92867826800AC033B /* AppDelegate.swift in Sources */,
+				6D6992422867F8C500AC033B /* Float.swift in Sources */,
 				6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */,
 				6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */,
 				6D69923B2867B45C00AC033B /* Expenses.swift in Sources */,
@@ -308,16 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6992102867826B00AC033B /* ExpensesReportTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D6992112867826B00AC033B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D69921A2867826B00AC033B /* ExpensesReportUITests.swift in Sources */,
-				6D69921C2867826B00AC033B /* ExpensesReportUITestsLaunchTests.swift in Sources */,
+				6D6992452867FAE600AC033B /* FloatTests.swift in Sources */,
+				6D69923E2867F3BB00AC033B /* ExpensesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,11 +283,6 @@
 			isa = PBXTargetDependency;
 			target = 6D6991F42867826800AC033B /* ExpensesReport */;
 			targetProxy = 6D69920C2867826B00AC033B /* PBXContainerItemProxy */;
-		};
-		6D6992172867826B00AC033B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D6991F42867826800AC033B /* ExpensesReport */;
-			targetProxy = 6D6992162867826B00AC033B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -556,40 +506,6 @@
 			};
 			name = Release;
 		};
-		6D6992262867826B00AC033B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcenturion.ExpensesReportUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ExpensesReport;
-			};
-			name = Debug;
-		};
-		6D6992272867826B00AC033B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jcenturion.ExpensesReportUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ExpensesReport;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,15 +532,6 @@
 			buildConfigurations = (
 				6D6992232867826B00AC033B /* Debug */,
 				6D6992242867826B00AC033B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6D6992252867826B00AC033B /* Build configuration list for PBXNativeTarget "ExpensesReportUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D6992262867826B00AC033B /* Debug */,
-				6D6992272867826B00AC033B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
