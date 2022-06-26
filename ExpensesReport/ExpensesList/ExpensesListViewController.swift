@@ -16,9 +16,13 @@ class ExpensesListViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var balanceBackgroundView: UIView!
 
+    // MARK: - Table view
+    @IBOutlet weak var expensesTableView: UITableView!
     // MARK: - View Model
     private let viewModel: ExpensesListViewModel
+    private var expensesTableViewDataSource: ExpensesTableViewDataSource!
 
+    // MARK: - Constructor
     init(withViewModel viewModel: ExpensesListViewModel = ExpensesListViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -28,6 +32,7 @@ class ExpensesListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBalanceView()
@@ -35,14 +40,16 @@ class ExpensesListViewController: UIViewController {
         viewModel.loadExpensesData()
     }
 
+    // MARK: View
     func setUpBalanceView() {
         balanceBackgroundView.rondedView()
     }
 
     func observeChanges() {
-        viewModel.bindViewModelToController = { expenses in
-            print(expenses)
-            self.update(summary: expenses.summary)
+        viewModel.bindViewModelToController = { expensesListData in
+            print(expensesListData)
+            self.update(summary: expensesListData.summary)
+            self.update(expensesTable: expensesListData.expenses)
         }
     }
 
@@ -53,5 +60,14 @@ class ExpensesListViewController: UIViewController {
 
         let percent = ((data.expenses * 100)/data.income).normalize()
         progressBar.progress = percent
+    }
+
+    func update(expensesTable data: [ExpensesByDay]) {
+        expensesTableViewDataSource = ExpensesTableViewDataSource(withExpensesByDayArray: data)
+
+        DispatchQueue.main.async {
+            self.expensesTableView.dataSource = self.expensesTableViewDataSource
+            self.expensesTableView.reloadData()
+        }
     }
 }
