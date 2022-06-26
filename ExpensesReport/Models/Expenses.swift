@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Expenses {
-    let expenses: [Expense]
-}
-
 struct Expense {
     let description: String
     let date: Date
@@ -26,19 +22,19 @@ struct Summary {
     let income: Float
     let expenses: Float
     let balance: Float
+    init(income: Float, expenses: Float) {
+        self.income = income
+        self.expenses = expenses
+        self.balance = income - expenses
+    }
 }
 
 struct ExpensesListData {
-    let expenses: [Expense]
+    let expenses: [ExpensesByDay]
     let summary: Summary
 }
 
-extension Expenses {
-    func totalIncome() -> Float {
-        expenses.filter { $0.transaction == .income}.reduce(0) {$0 + $1.amount}
-    }
-
-    func totalExpenses() -> Float {
-        expenses.filter { $0.transaction == .expense}.reduce(0) {$0 + $1.amount}
-    }
+struct ExpensesByDay {
+    let title: String
+    let expenses: [Expense]
 }
