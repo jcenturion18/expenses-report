@@ -10,10 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpensesListViewController" customModule="ExpensesReport" customModuleProvider="target">
             <connections>
-                <outlet property="amountLabel" destination="R3T-UH-akr" id="MFG-Ve-b1k"/>
+                <outlet property="balanceAmountLabel" destination="Duk-2p-9CA" id="jdx-C9-ift"/>
                 <outlet property="balanceBackgroundView" destination="YNd-sH-IfW" id="wf8-xn-ouR"/>
-                <outlet property="balanceLabel" destination="Duk-2p-9CA" id="Bn8-V7-0sZ"/>
-                <outlet property="incomeLabel" destination="j2r-xT-e2C" id="uVj-D3-a5D"/>
+                <outlet property="expensesAmountLabel" destination="R3T-UH-akr" id="cKC-Mu-YKy"/>
+                <outlet property="incomeAmountLabel" destination="j2r-xT-e2C" id="xSz-vX-O0e"/>
                 <outlet property="progressBar" destination="O3z-Xp-NK5" id="P6B-p8-gHE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
