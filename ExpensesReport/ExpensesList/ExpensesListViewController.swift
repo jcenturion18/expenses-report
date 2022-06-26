@@ -10,9 +10,9 @@ import UIKit
 class ExpensesListViewController: UIViewController {
 
     // MARK: - Balance view properties
-    @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var incomeLabel: UILabel!
-    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var expensesAmountLabel: UILabel!
+    @IBOutlet weak var incomeAmountLabel: UILabel!
+    @IBOutlet weak var balanceAmountLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var balanceBackgroundView: UIView!
 
@@ -32,7 +32,7 @@ class ExpensesListViewController: UIViewController {
         super.viewDidLoad()
         setUpBalanceView()
         observeChanges()
-        viewModel.loadExpensesData() // TODO: This must be done by DB
+        viewModel.loadExpensesData()
     }
 
     func setUpBalanceView() {
@@ -40,8 +40,18 @@ class ExpensesListViewController: UIViewController {
     }
 
     func observeChanges() {
-        viewModel.bindViewModelToController = { expeses in
-            print(expeses)
+        viewModel.bindViewModelToController = { expenses in
+            print(expenses)
+            self.update(summary: expenses.summary)
         }
+    }
+
+    func update(summary data: Summary) {
+        expensesAmountLabel.text = "$ \(data.expenses)"
+        incomeAmountLabel.text = "$ \(data.income)"
+        balanceAmountLabel.text = "$ \(data.balance)"
+
+        let percent = ((data.expenses * 100)/data.income).normalize()
+        progressBar.progress = percent
     }
 }
