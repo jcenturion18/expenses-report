@@ -16,7 +16,7 @@ class ExpensesTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        expenses[section].expenses.count + 1
+        expenses[section].expenses.count + 1 // Add one so we can use the header as a row
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,17 +24,15 @@ class ExpensesTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-
-        if  !(cell != nil) {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        }
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseTableViewCell.description()) as! ExpenseTableViewCell
+        // swiftlint:enable force_cast
 
         if indexPath.row == 0 {
-            cell!.textLabel?.text = expenses[indexPath.section].title
+            cell.setUp(withExpensesByDay: expenses[indexPath.section])
         } else {
-            cell!.textLabel?.text = expenses[indexPath.section].expenses[indexPath.row - 1].description
+            cell.setUp(withExpense: expenses[indexPath.section].expenses[indexPath.row - 1])
         }
-        return cell!
+        return cell
     }
 }
