@@ -18,20 +18,31 @@ class AddTransactionViewController: UIViewController {
     private var keyboardIsPresent = false
     private var selectedTransactionType: TransactionType?
 
+    private var delegate: AddTransactionViewControllerDelegate!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         containerView.roundedView()
         addBackgroundTap()
         setUpPickerView()
+    }
 
+    func setDelegate(_ delegate: AddTransactionViewControllerDelegate) {
+        self.delegate = delegate
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         clearView()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillDisappear),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillAppear),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
     }
 
     func addBackgroundTap() {
@@ -72,12 +83,15 @@ class AddTransactionViewController: UIViewController {
             return
         }
         if let transaction = validInput.1 {
-            print(transaction)
+            delegate.transactionCreated(transaction)
         }
     }
 
     func showErrorAlert() {
-        let alertController = UIAlertController(title: "Ups! Something gone wrong", message: "Please, check your information.", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: "Ups! Something gone wrong",
+            message: "Please, check your information.",
+            preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
@@ -95,6 +109,7 @@ class AddTransactionViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        // swiftlint:disable notification_center_detachment
         NotificationCenter.default.removeObserver(self)
     }
 }
