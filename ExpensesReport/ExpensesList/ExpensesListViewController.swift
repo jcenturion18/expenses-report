@@ -21,6 +21,7 @@ class ExpensesListViewController: UIViewController {
     // MARK: - View Model
     private let viewModel: ExpensesListViewModel
     private var expensesTableViewDataSource: ExpensesTableViewDataSource!
+    private var expensesTableViewDelegate = ExpensesTableViewDelegate()
 
     // MARK: - Constructor
     init(withViewModel viewModel: ExpensesListViewModel = ExpensesListViewModel()) {
@@ -35,9 +36,15 @@ class ExpensesListViewController: UIViewController {
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        expensesTableView.delegate = expensesTableViewDelegate
         setUpBalanceView()
         observeChanges()
         viewModel.loadExpensesData()
+
+        //
+        let expenseTableViewCell = UINib(nibName: String.init(describing: ExpenseTableViewCell.self), bundle: Bundle.main)
+        expensesTableView.register(expenseTableViewCell, forCellReuseIdentifier: ExpenseTableViewCell.description())
+
     }
 
     // MARK: View
