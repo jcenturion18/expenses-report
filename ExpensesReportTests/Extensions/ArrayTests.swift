@@ -36,7 +36,7 @@ class ArrayTests: XCTestCase {
 
         let expensesByDayArray = expenses.toExpensesByDayArray()
         XCTAssertEqual(1, expensesByDayArray.count)
-        XCTAssertEqual("12,01,1990", expensesByDayArray[0].title)
+        XCTAssertEqual("12th January, 1990", expensesByDayArray[0].title)
         XCTAssertEqual(2, expensesByDayArray[0].expenses.count)
     }
 
