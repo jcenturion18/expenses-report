@@ -17,4 +17,12 @@ extension UIView {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
     }
+
+    func circularView() {
+        layer.cornerRadius = frame.size.width / 2
+        clipsToBounds = true
+
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1
+    }
 }
