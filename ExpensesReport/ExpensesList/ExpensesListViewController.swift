@@ -38,15 +38,20 @@ class ExpensesListViewController: UIViewController {
         expensesTableView.delegate = self
         setUpBalanceView()
         observeChanges()
+        registerCellsOnTableView()
         viewModel.loadExpensesData()
-
-        //
-        let expenseTableViewCell = UINib(nibName: String.init(describing: ExpenseTableViewCell.self), bundle: Bundle.main)
-        expensesTableView.register(expenseTableViewCell, forCellReuseIdentifier: ExpenseTableViewCell.description())
-
     }
 
     // MARK: View
+    func registerCellsOnTableView() {
+        let expenseTableViewCell = UINib(
+            nibName: String.init(describing: ExpenseTableViewCell.self),
+            bundle: Bundle.main)
+        
+        expensesTableView.register(expenseTableViewCell,
+                                   forCellReuseIdentifier: ExpenseTableViewCell.description())
+    }
+    
     func setUpBalanceView() {
         balanceBackgroundView.rondedView()
     }
@@ -80,7 +85,8 @@ class ExpensesListViewController: UIViewController {
 
 extension ExpensesListViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         guard indexPath.row != 0 else {
             return nil
         }
