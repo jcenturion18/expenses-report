@@ -15,6 +15,7 @@
                 <outlet property="expensesAmountLabel" destination="R3T-UH-akr" id="cKC-Mu-YKy"/>
                 <outlet property="expensesTableView" destination="npY-tG-UA0" id="Qgd-dN-TqV"/>
                 <outlet property="incomeAmountLabel" destination="j2r-xT-e2C" id="xSz-vX-O0e"/>
+                <outlet property="plusButton" destination="VTJ-VH-CsY" id="OBh-kD-5LG"/>
                 <outlet property="progressBar" destination="O3z-Xp-NK5" id="P6B-p8-gHE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +25,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="npY-tG-UA0">
+                    <rect key="frame" x="16" y="172" width="382" height="690"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNd-sH-IfW" userLabel="Balance Info">
                     <rect key="frame" x="16" y="60" width="382" height="112"/>
                     <subviews>
@@ -175,20 +180,40 @@
                         <constraint firstItem="O3z-Xp-NK5" firstAttribute="leading" secondItem="YNd-sH-IfW" secondAttribute="leading" constant="16" id="tc5-yj-GgZ"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="npY-tG-UA0">
-                    <rect key="frame" x="16" y="172" width="382" height="690"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-VH-CsY">
+                    <rect key="frame" x="358" y="806" width="40" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAf-iH-QAu">
+                            <rect key="frame" x="12" y="6" width="16" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="YDf-ZD-9Rj"/>
+                                <constraint firstAttribute="height" constant="25" id="ew9-ge-YK4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="5rH-fn-vUe"/>
+                        <constraint firstAttribute="height" constant="40" id="Pft-Tv-aEI"/>
+                        <constraint firstItem="YAf-iH-QAu" firstAttribute="centerY" secondItem="VTJ-VH-CsY" secondAttribute="centerY" constant="-1.5" id="T94-gF-FyY"/>
+                        <constraint firstItem="YAf-iH-QAu" firstAttribute="centerX" secondItem="VTJ-VH-CsY" secondAttribute="centerX" id="rSG-mL-0Rz"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VTJ-VH-CsY" secondAttribute="trailing" constant="16" id="2sF-EL-GVS"/>
                 <constraint firstItem="YNd-sH-IfW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="C23-5h-USx"/>
                 <constraint firstItem="npY-tG-UA0" firstAttribute="top" secondItem="YNd-sH-IfW" secondAttribute="bottom" id="C69-cb-5rN"/>
                 <constraint firstItem="npY-tG-UA0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ct8-ya-NNr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YNd-sH-IfW" secondAttribute="trailing" constant="16" id="L4v-kU-eoz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="npY-tG-UA0" secondAttribute="bottom" id="Z16-O6-bmv"/>
                 <constraint firstItem="YNd-sH-IfW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="eyo-3d-w4j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VTJ-VH-CsY" secondAttribute="bottom" constant="16" id="pvY-yp-OOm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="npY-tG-UA0" secondAttribute="trailing" constant="16" id="v6g-ih-l2p"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>

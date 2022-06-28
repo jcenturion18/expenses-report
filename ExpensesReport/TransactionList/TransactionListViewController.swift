@@ -15,6 +15,7 @@ class TransactionListViewController: UIViewController {
     @IBOutlet weak var balanceAmountLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var balanceBackgroundView: UIView!
+    @IBOutlet weak var plusButton: UIView!
 
     // MARK: - Table view
     @IBOutlet weak var expensesTableView: UITableView!
@@ -37,6 +38,7 @@ class TransactionListViewController: UIViewController {
         super.viewDidLoad()
         expensesTableView.delegate = self
         setUpBalanceView()
+        setUpPlusButton()
         observeChanges()
         registerCellsOnTableView()
         viewModel.loadExpensesData()
@@ -56,9 +58,15 @@ class TransactionListViewController: UIViewController {
         balanceBackgroundView.rondedView()
     }
 
+    func setUpPlusButton() {
+        plusButton.circularView()
+
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openAddTransactionController))
+        plusButton.addGestureRecognizer(gestureRecognizer)
+    }
+
     func observeChanges() {
         viewModel.bindViewModelToController = { transactionListData in
-            print(transactionListData)
             self.update(summary: transactionListData.summary)
             self.update(transactionsTable: transactionListData.transactions)
         }
@@ -81,6 +89,19 @@ class TransactionListViewController: UIViewController {
             self.expensesTableView.reloadData()
         }
     }
+    
+    // MARK: - Add transaction
+
+    @objc func openAddTransactionController() {
+        present(addTransactionController, animated: true)
+    }
+
+    private var addTransactionController: AddTransactionViewController = {
+        let addTransactionViewController = AddTransactionViewController()
+        addTransactionViewController.modalPresentationStyle = .overCurrentContext
+        addTransactionViewController.modalTransitionStyle = .crossDissolve
+        return addTransactionViewController
+    }()
 }
 
 extension TransactionListViewController: UITableViewDelegate {
