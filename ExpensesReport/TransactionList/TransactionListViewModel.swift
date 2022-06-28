@@ -15,7 +15,7 @@ class TransactionListViewModel {
         }
     }
 
-    var bindViewModelToController : ((_ transaction: TransactionListData) -> Void) = {_ in }
+    var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) = {_ in }
 
     func loadExpensesData() {
         let expenses = [
