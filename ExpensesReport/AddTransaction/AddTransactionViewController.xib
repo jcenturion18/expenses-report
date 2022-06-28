@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTransactionViewController" customModule="ExpensesReport" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="4xN-Te-g83" id="lkv-nY-6E2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,16 +20,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xN-Te-g83">
-                    <rect key="frame" x="0.0" y="60" width="418" height="300"/>
+                    <rect key="frame" x="16" y="60" width="386" height="300"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add transaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYr-mF-oAI">
-                            <rect key="frame" x="16" y="16" width="386" height="21"/>
+                            <rect key="frame" x="16" y="16" width="354" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transaction type" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjl-TB-Caa">
-                            <rect key="frame" x="84" y="53" width="250" height="34"/>
+                            <rect key="frame" x="68" y="53" width="250" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="6BL-cZ-n8E"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rJ6-iw-U5N"/>
@@ -37,7 +38,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transaction description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTT-zn-IDM">
-                            <rect key="frame" x="84" y="103" width="250" height="34"/>
+                            <rect key="frame" x="68" y="103" width="250" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="17g-4m-mK8"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="dQj-ka-JaH"/>
@@ -46,7 +47,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfP-vG-uON">
-                            <rect key="frame" x="159" y="153" width="100" height="34"/>
+                            <rect key="frame" x="143" y="153" width="100" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="IvM-yR-JsU"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dUr-qf-4SC"/>
@@ -55,7 +56,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txu-J8-2aC">
-                            <rect key="frame" x="109" y="211" width="200" height="40"/>
+                            <rect key="frame" x="93" y="211" width="200" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0ef-Bp-Slu"/>
                                 <constraint firstAttribute="height" constant="40" id="Bzh-JS-ODs"/>
@@ -91,14 +92,14 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="0.75270132467049322" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4xN-Te-g83" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="87R-l6-2IS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4xN-Te-g83" secondAttribute="bottom" constant="16" id="BqE-mG-Bpi"/>
                 <constraint firstItem="4xN-Te-g83" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="GHa-UL-Vb6"/>
                 <constraint firstItem="4xN-Te-g83" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hce-of-XB3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4xN-Te-g83" secondAttribute="trailing" id="jar-ll-zjh"/>
-                <constraint firstItem="4xN-Te-g83" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mGE-pC-C9Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4xN-Te-g83" secondAttribute="trailing" constant="16" id="jar-ll-zjh"/>
+                <constraint firstItem="4xN-Te-g83" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mGE-pC-C9Z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="140.57971014492756" y="-52.901785714285715"/>
