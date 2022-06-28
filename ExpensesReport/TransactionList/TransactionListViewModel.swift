@@ -44,6 +44,10 @@ class TransactionListViewModel {
             transactionListData.transactions.remove(at: indexPath.section)
         }
     }
+
+    func transactionCreated(_ transaction: Transaction) {
+        print(transaction)
+    }
 }
 
 // TODO: Remove
