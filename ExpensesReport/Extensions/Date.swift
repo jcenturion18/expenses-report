@@ -17,7 +17,7 @@ extension Date {
     }
 
     private func formatedString() -> String {
-        return "dd'\(self.daySuffix())' MMMM, yyyy"
+        return "d'\(self.daySuffix())' MMMM, yyyy"
     }
 
     private func daySuffix() -> String {
