@@ -11,15 +11,18 @@ class ExpenseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var accesoryLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    func setUp(withExpense expense: Expense) {
+        titleLabel.text = expense.description
+        accesoryLabel.text = processAmount(value: expense.amount, for: expense.transaction)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setUp(withExpensesByDay expenses: ExpensesByDay) {
+        titleLabel.text = expenses.title
+        accesoryLabel.text = ""
     }
 
+    func processAmount(value: Float, for transaction: Transaction) -> String {
+        (transaction == .income) ? "$\(value)": "- $\(value)"
+    }
 }
