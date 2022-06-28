@@ -7,14 +7,14 @@
 
 import Foundation
 
-extension Dictionary where Key == String, Value == [Expense] {
+extension Dictionary where Key == String, Value == [Transaction] {
 
-    func toObject() -> [ExpensesByDay] {
+    func toObject() -> [TransactionsByDay] {
 
-        var expensesByDay = [ExpensesByDay]()
+        var expensesByDay = [TransactionsByDay]()
 
         for(date, expenses) in self {
-            expensesByDay.append(ExpensesByDay(title: date, expenses: expenses))
+            expensesByDay.append(TransactionsByDay(title: date, expenses: expenses))
         }
 
         return expensesByDay

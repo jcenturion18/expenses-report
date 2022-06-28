@@ -11,11 +11,11 @@
 		6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6991FA2867826800AC033B /* SceneDelegate.swift */; };
 		6D6992022867826A00AC033B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992012867826A00AC033B /* Assets.xcassets */; };
 		6D6992052867826A00AC033B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992032867826A00AC033B /* LaunchScreen.storyboard */; };
-		6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992302867997D00AC033B /* ExpensesListViewController.swift */; };
-		6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992312867997D00AC033B /* ExpensesListViewController.xib */; };
+		6D6992322867997D00AC033B /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992302867997D00AC033B /* TransactionListViewController.swift */; };
+		6D6992332867997D00AC033B /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6992312867997D00AC033B /* TransactionListViewController.xib */; };
 		6D6992362867A4E900AC033B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992352867A4E900AC033B /* UIView.swift */; };
-		6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */; };
-		6D69923B2867B45C00AC033B /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69923A2867B45C00AC033B /* Expenses.swift */; };
+		6D6992382867A87A00AC033B /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992372867A87A00AC033B /* TransactionListViewModel.swift */; };
+		6D69923B2867B45C00AC033B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69923A2867B45C00AC033B /* Transaction.swift */; };
 		6D69923E2867F3BB00AC033B /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69923D2867F3BB00AC033B /* ArrayTests.swift */; };
 		6D6992422867F8C500AC033B /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992412867F8C500AC033B /* Float.swift */; };
 		6D6992452867FAE600AC033B /* FloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6992442867FAE600AC033B /* FloatTests.swift */; };
@@ -23,12 +23,12 @@
 		6D69924928680F6000AC033B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924828680F6000AC033B /* Array.swift */; };
 		6D69924B2868127500AC033B /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924A2868127500AC033B /* Dictionary.swift */; };
 		6D69924D286812A100AC033B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69924C286812A100AC033B /* Date.swift */; };
-		6D699251286817C700AC033B /* ExpensesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699250286817C700AC033B /* ExpensesTableViewDataSource.swift */; };
-		6D699259286A288D00AC033B /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699257286A288D00AC033B /* ExpenseTableViewCell.swift */; };
-		6D69925A286A288D00AC033B /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D699258286A288D00AC033B /* ExpenseTableViewCell.xib */; };
+		6D699251286817C700AC033B /* TransactionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699250286817C700AC033B /* TransactionTableViewDataSource.swift */; };
+		6D699259286A288D00AC033B /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699257286A288D00AC033B /* TransactionTableViewCell.swift */; };
+		6D69925A286A288D00AC033B /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D699258286A288D00AC033B /* TransactionTableViewCell.xib */; };
 		6D69925C286A8CEC00AC033B /* RoudedSectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69925B286A8CEB00AC033B /* RoudedSectionTableView.swift */; };
 		6D699261286B3CF000AC033B /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699260286B3CF000AC033B /* DateTests.swift */; };
-		6D699264286B485A00AC033B /* ExpenseTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699263286B485A00AC033B /* ExpenseTableViewCellTests.swift */; };
+		6D699264286B485A00AC033B /* TransactionTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699263286B485A00AC033B /* TransactionTableViewCellTests.swift */; };
 		6D699266286B6B9100AC033B /* UIView+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699265286B6B9100AC033B /* UIView+Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +50,11 @@
 		6D6992042867826A00AC033B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D6992062867826A00AC033B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D69920B2867826B00AC033B /* ExpensesReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D6992302867997D00AC033B /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
-		6D6992312867997D00AC033B /* ExpensesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesListViewController.xib; sourceTree = "<group>"; };
+		6D6992302867997D00AC033B /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		6D6992312867997D00AC033B /* TransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListViewController.xib; sourceTree = "<group>"; };
 		6D6992352867A4E900AC033B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewModel.swift; sourceTree = "<group>"; };
-		6D69923A2867B45C00AC033B /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		6D6992372867A87A00AC033B /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		6D69923A2867B45C00AC033B /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		6D69923D2867F3BB00AC033B /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		6D6992412867F8C500AC033B /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		6D6992442867FAE600AC033B /* FloatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatTests.swift; sourceTree = "<group>"; };
@@ -62,12 +62,12 @@
 		6D69924828680F6000AC033B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		6D69924A2868127500AC033B /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		6D69924C286812A100AC033B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		6D699250286817C700AC033B /* ExpensesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewDataSource.swift; sourceTree = "<group>"; };
-		6D699257286A288D00AC033B /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
-		6D699258286A288D00AC033B /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		6D699250286817C700AC033B /* TransactionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewDataSource.swift; sourceTree = "<group>"; };
+		6D699257286A288D00AC033B /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		6D699258286A288D00AC033B /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		6D69925B286A8CEB00AC033B /* RoudedSectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoudedSectionTableView.swift; sourceTree = "<group>"; };
 		6D699260286B3CF000AC033B /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
-		6D699263286B485A00AC033B /* ExpenseTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCellTests.swift; sourceTree = "<group>"; };
+		6D699263286B485A00AC033B /* TransactionTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCellTests.swift; sourceTree = "<group>"; };
 		6D699265286B6B9100AC033B /* UIView+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,7 @@
 				6D69925D286B237400AC033B /* Tools */,
 				6D6992392867B42000AC033B /* Models */,
 				6D6992342867A4D900AC033B /* Extensions */,
-				6D69922F2867992400AC033B /* ExpensesList */,
+				6D69922F2867992400AC033B /* TransactionList */,
 				6D6991F82867826800AC033B /* AppDelegate.swift */,
 				6D6991FA2867826800AC033B /* SceneDelegate.swift */,
 				6D6992012867826A00AC033B /* Assets.xcassets */,
@@ -133,16 +133,16 @@
 			path = ExpensesReportTests;
 			sourceTree = "<group>";
 		};
-		6D69922F2867992400AC033B /* ExpensesList */ = {
+		6D69922F2867992400AC033B /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
 				6D6992522869E0DB00AC033B /* Cells */,
-				6D6992302867997D00AC033B /* ExpensesListViewController.swift */,
-				6D6992312867997D00AC033B /* ExpensesListViewController.xib */,
-				6D6992372867A87A00AC033B /* ExpensesListViewModel.swift */,
-				6D699250286817C700AC033B /* ExpensesTableViewDataSource.swift */,
+				6D6992302867997D00AC033B /* TransactionListViewController.swift */,
+				6D6992312867997D00AC033B /* TransactionListViewController.xib */,
+				6D6992372867A87A00AC033B /* TransactionListViewModel.swift */,
+				6D699250286817C700AC033B /* TransactionTableViewDataSource.swift */,
 			);
-			path = ExpensesList;
+			path = TransactionList;
 			sourceTree = "<group>";
 		};
 		6D6992342867A4D900AC033B /* Extensions */ = {
@@ -160,7 +160,7 @@
 		6D6992392867B42000AC033B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6D69923A2867B45C00AC033B /* Expenses.swift */,
+				6D69923A2867B45C00AC033B /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 		6D6992522869E0DB00AC033B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6D699257286A288D00AC033B /* ExpenseTableViewCell.swift */,
-				6D699258286A288D00AC033B /* ExpenseTableViewCell.xib */,
+				6D699257286A288D00AC033B /* TransactionTableViewCell.swift */,
+				6D699258286A288D00AC033B /* TransactionTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 		6D699262286B484E00AC033B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6D699263286B485A00AC033B /* ExpenseTableViewCellTests.swift */,
+				6D699263286B485A00AC033B /* TransactionTableViewCellTests.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -290,10 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6992332867997D00AC033B /* ExpensesListViewController.xib in Resources */,
+				6D6992332867997D00AC033B /* TransactionListViewController.xib in Resources */,
 				6D6992052867826A00AC033B /* LaunchScreen.storyboard in Resources */,
 				6D6992022867826A00AC033B /* Assets.xcassets in Resources */,
-				6D69925A286A288D00AC033B /* ExpenseTableViewCell.xib in Resources */,
+				6D69925A286A288D00AC033B /* TransactionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,16 +314,16 @@
 				6D69924928680F6000AC033B /* Array.swift in Sources */,
 				6D69924B2868127500AC033B /* Dictionary.swift in Sources */,
 				6D6992362867A4E900AC033B /* UIView.swift in Sources */,
-				6D6992382867A87A00AC033B /* ExpensesListViewModel.swift in Sources */,
+				6D6992382867A87A00AC033B /* TransactionListViewModel.swift in Sources */,
 				6D6991F92867826800AC033B /* AppDelegate.swift in Sources */,
 				6D6992422867F8C500AC033B /* Float.swift in Sources */,
-				6D699259286A288D00AC033B /* ExpenseTableViewCell.swift in Sources */,
+				6D699259286A288D00AC033B /* TransactionTableViewCell.swift in Sources */,
 				6D69925C286A8CEC00AC033B /* RoudedSectionTableView.swift in Sources */,
-				6D699251286817C700AC033B /* ExpensesTableViewDataSource.swift in Sources */,
-				6D6992322867997D00AC033B /* ExpensesListViewController.swift in Sources */,
+				6D699251286817C700AC033B /* TransactionTableViewDataSource.swift in Sources */,
+				6D6992322867997D00AC033B /* TransactionListViewController.swift in Sources */,
 				6D69924D286812A100AC033B /* Date.swift in Sources */,
 				6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */,
-				6D69923B2867B45C00AC033B /* Expenses.swift in Sources */,
+				6D69923B2867B45C00AC033B /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6992452867FAE600AC033B /* FloatTests.swift in Sources */,
-				6D699264286B485A00AC033B /* ExpenseTableViewCellTests.swift in Sources */,
+				6D699264286B485A00AC033B /* TransactionTableViewCellTests.swift in Sources */,
 				6D69923E2867F3BB00AC033B /* ArrayTests.swift in Sources */,
 				6D699247286802D100AC033B /* UIViewTests.swift in Sources */,
 				6D699266286B6B9100AC033B /* UIView+Tests.swift in Sources */,

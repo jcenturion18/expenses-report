@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ExpensesTableViewDataSource: NSObject, UITableViewDataSource {
+class TransactionTableViewDataSource: NSObject, UITableViewDataSource {
 
-    let expenses: [ExpensesByDay]
-    init(withExpensesByDayArray data: [ExpensesByDay]) {
+    let expenses: [TransactionsByDay]
+    init(withExpensesByDayArray data: [TransactionsByDay]) {
         self.expenses = data
         super.init()
     }
@@ -26,8 +26,8 @@ class ExpensesTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: ExpenseTableViewCell.description()
-        ) as! ExpenseTableViewCell
+            withIdentifier: TransactionTableViewCell.description()
+        ) as! TransactionTableViewCell
         // swiftlint:enable force_cast
 
         if indexPath.row == 0 {

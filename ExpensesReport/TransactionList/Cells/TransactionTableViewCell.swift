@@ -7,22 +7,22 @@
 
 import UIKit
 
-class ExpenseTableViewCell: UITableViewCell {
+class TransactionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var accesoryLabel: UILabel!
 
-    func setUp(withExpense expense: Expense) {
+    func setUp(withExpense expense: Transaction) {
         titleLabel.text = expense.description
         accesoryLabel.text = processAmount(value: expense.amount, for: expense.transaction)
     }
 
-    func setUp(withExpensesByDay expenses: ExpensesByDay) {
+    func setUp(withExpensesByDay expenses: TransactionsByDay) {
         titleLabel.text = expenses.title
         accesoryLabel.text = ""
     }
 
-    func processAmount(value: Float, for transaction: Transaction) -> String {
+    func processAmount(value: Float, for transaction: TransactionType) -> String {
         (transaction == .income) ? "$\(value)": "- $\(value)"
     }
 }

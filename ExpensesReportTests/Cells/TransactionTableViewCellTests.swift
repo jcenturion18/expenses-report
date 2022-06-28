@@ -8,13 +8,13 @@
 import XCTest
 @testable import ExpensesReport
 
-class ExpenseTableViewCellTests: XCTestCase {
+class TransactionTableViewCellTests: XCTestCase {
 
     func testSetUpViewWithExpenseIncome() throws {
 
-        let cell = ExpenseTableViewCell.loadNib()
+        let cell = TransactionTableViewCell.loadNib()
 
-        let expense = Expense(description: "Description",
+        let expense = Transaction(description: "Description",
                               date: "12/01/1990".toDate(),
                               amount: 10,
                               transaction: .income)
@@ -26,9 +26,9 @@ class ExpenseTableViewCellTests: XCTestCase {
     }
 
     func testSetUpViewWithExpenseNegativeExpense() throws {
-        let cell = ExpenseTableViewCell.loadNib()
+        let cell = TransactionTableViewCell.loadNib()
 
-        let expense = Expense(description: "Description",
+        let expense = Transaction(description: "Description",
                               date: "12/01/1990".toDate(),
                               amount: 10,
                               transaction: .expense)
@@ -40,9 +40,9 @@ class ExpenseTableViewCellTests: XCTestCase {
     }
 
     func testSetUpViewWithExpensesByDay() throws {
-        let cell = ExpenseTableViewCell.loadNib()
+        let cell = TransactionTableViewCell.loadNib()
 
-        let expensesByDay = ExpensesByDay(title: "Day", expenses: [])
+        let expensesByDay = TransactionsByDay(title: "Day", expenses: [])
 
         cell.setUp(withExpensesByDay: expensesByDay)
 

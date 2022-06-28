@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExpensesListViewController: UIViewController {
+class TransactionListViewController: UIViewController {
 
     // MARK: - Balance view properties
     @IBOutlet weak var expensesAmountLabel: UILabel!
@@ -19,11 +19,11 @@ class ExpensesListViewController: UIViewController {
     // MARK: - Table view
     @IBOutlet weak var expensesTableView: UITableView!
     // MARK: - View Model
-    private let viewModel: ExpensesListViewModel
-    private var expensesTableViewDataSource: ExpensesTableViewDataSource!
+    private let viewModel: TransactionListViewModel
+    private var expensesTableViewDataSource: TransactionTableViewDataSource!
 
     // MARK: - Constructor
-    init(withViewModel viewModel: ExpensesListViewModel = ExpensesListViewModel()) {
+    init(withViewModel viewModel: TransactionListViewModel = TransactionListViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,22 +45,22 @@ class ExpensesListViewController: UIViewController {
     // MARK: View
     func registerCellsOnTableView() {
         let expenseTableViewCell = UINib(
-            nibName: String.init(describing: ExpenseTableViewCell.self),
+            nibName: String.init(describing: TransactionTableViewCell.self),
             bundle: Bundle.main)
-        
+
         expensesTableView.register(expenseTableViewCell,
-                                   forCellReuseIdentifier: ExpenseTableViewCell.description())
+                                   forCellReuseIdentifier: TransactionTableViewCell.description())
     }
-    
+
     func setUpBalanceView() {
         balanceBackgroundView.rondedView()
     }
 
     func observeChanges() {
-        viewModel.bindViewModelToController = { expensesListData in
-            print(expensesListData)
-            self.update(summary: expensesListData.summary)
-            self.update(expensesTable: expensesListData.expenses)
+        viewModel.bindViewModelToController = { transactionListData in
+            print(transactionListData)
+            self.update(summary: transactionListData.summary)
+            self.update(transactionsTable: transactionListData.transactions)
         }
     }
 
@@ -73,8 +73,8 @@ class ExpensesListViewController: UIViewController {
         progressBar.progress = percent
     }
 
-    func update(expensesTable data: [ExpensesByDay]) {
-        expensesTableViewDataSource = ExpensesTableViewDataSource(withExpensesByDayArray: data)
+    func update(transactionsTable data: [TransactionsByDay]) {
+        expensesTableViewDataSource = TransactionTableViewDataSource(withExpensesByDayArray: data)
 
         DispatchQueue.main.async {
             self.expensesTableView.dataSource = self.expensesTableViewDataSource
@@ -83,7 +83,7 @@ class ExpensesListViewController: UIViewController {
     }
 }
 
-extension ExpensesListViewController: UITableViewDelegate {
+extension TransactionListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

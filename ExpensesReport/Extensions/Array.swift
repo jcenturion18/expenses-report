@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Array where Element == Expense {
+extension Array where Element == Transaction {
     func totalIncome() -> Float {
         filter { $0.transaction == .income}.reduce(0) {$0 + $1.amount}
     }
@@ -16,22 +16,22 @@ extension Array where Element == Expense {
         filter { $0.transaction == .expense}.reduce(0) {$0 + $1.amount}
     }
 
-    private func toDictionary() -> [String: [Expense]] {
-        var expensesDictionary = [String: [Expense]]()
+    private func toDictionary() -> [String: [Transaction]] {
+        var expensesDictionary = [String: [Transaction]]()
 
         forEach {
             let dateAsString = $0.date.toString()
             if expensesDictionary.keys.contains(dateAsString) {
                 expensesDictionary[dateAsString]!.append($0)
             } else {
-                expensesDictionary[dateAsString] = [Expense]()
+                expensesDictionary[dateAsString] = [Transaction]()
                 expensesDictionary[dateAsString]!.append($0)
             }
         }
         return expensesDictionary
     }
 
-    func toExpensesByDayArray() -> [ExpensesByDay] {
+    func toExpensesByDayArray() -> [TransactionsByDay] {
         toDictionary().toObject()
     }
 }

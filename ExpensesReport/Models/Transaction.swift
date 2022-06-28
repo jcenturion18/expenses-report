@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Expense {
+struct Transaction {
     let description: String
     let date: Date
     let amount: Float
-    let transaction: Transaction
+    let transaction: TransactionType
 }
 
-enum Transaction {
+enum TransactionType {
 case expense, income
 }
 
@@ -29,12 +29,12 @@ struct Summary {
     }
 }
 
-struct ExpensesListData {
-    var expenses: [ExpensesByDay]
+struct TransactionListData {
+    var transactions: [TransactionsByDay]
     let summary: Summary
 }
 
-struct ExpensesByDay {
+struct TransactionsByDay {
     let title: String
-    var expenses: [Expense]
+    var expenses: [Transaction]
 }

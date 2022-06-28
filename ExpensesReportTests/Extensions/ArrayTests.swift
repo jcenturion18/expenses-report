@@ -12,8 +12,8 @@ class ArrayTests: XCTestCase {
 
     func testTotalIncome() throws {
         let expenses = [
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .income),
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .income)
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .income),
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .income)
         ]
 
         XCTAssertEqual(14, expenses.totalIncome())
@@ -21,8 +21,8 @@ class ArrayTests: XCTestCase {
 
     func testTotalExpenses() throws {
         let expenses = [
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense),
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense)
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense),
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense)
         ]
 
         XCTAssertEqual(14, expenses.totalExpenses())
@@ -30,8 +30,8 @@ class ArrayTests: XCTestCase {
 
     func testToExpensesByDayArray() throws {
         let expenses = [
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense),
-            Expense(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense)
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense),
+            Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense)
         ]
 
         let expensesByDayArray = expenses.toExpensesByDayArray()
