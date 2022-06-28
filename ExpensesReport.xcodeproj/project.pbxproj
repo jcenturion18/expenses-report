@@ -27,6 +27,7 @@
 		6D699259286A288D00AC033B /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699257286A288D00AC033B /* ExpenseTableViewCell.swift */; };
 		6D69925A286A288D00AC033B /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D699258286A288D00AC033B /* ExpenseTableViewCell.xib */; };
 		6D69925C286A8CEC00AC033B /* RoudedSectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69925B286A8CEB00AC033B /* RoudedSectionTableView.swift */; };
+		6D699261286B3CF000AC033B /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699260286B3CF000AC033B /* DateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6D699257286A288D00AC033B /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		6D699258286A288D00AC033B /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
 		6D69925B286A8CEB00AC033B /* RoudedSectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoudedSectionTableView.swift; sourceTree = "<group>"; };
+		6D699260286B3CF000AC033B /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				6D69923D2867F3BB00AC033B /* ArrayTests.swift */,
 				6D6992442867FAE600AC033B /* FloatTests.swift */,
 				6D699246286802D100AC033B /* UIViewTests.swift */,
+				6D699260286B3CF000AC033B /* DateTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				6D6992452867FAE600AC033B /* FloatTests.swift in Sources */,
 				6D69923E2867F3BB00AC033B /* ArrayTests.swift in Sources */,
 				6D699247286802D100AC033B /* UIViewTests.swift in Sources */,
+				6D699261286B3CF000AC033B /* DateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
