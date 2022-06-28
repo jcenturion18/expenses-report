@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTransactionViewController" customModule="ExpensesReport" customModuleProvider="target">
             <connections>
+                <outlet property="amountInput" destination="JfP-vG-uON" id="WaE-jP-0dt"/>
                 <outlet property="containerView" destination="4xN-Te-g83" id="lkv-nY-6E2"/>
+                <outlet property="transactionDescriptionInput" destination="QTT-zn-IDM" id="YKL-F8-TqO"/>
+                <outlet property="transactionTypeInput" destination="Jjl-TB-Caa" id="TOS-rf-BlT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -53,7 +56,7 @@
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dUr-qf-4SC"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txu-J8-2aC">
                             <rect key="frame" x="93" y="211" width="200" height="40"/>
@@ -64,6 +67,9 @@
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                            <connections>
+                                <action selector="addAction:" destination="-1" eventType="touchUpInside" id="3Pp-Th-VMT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
