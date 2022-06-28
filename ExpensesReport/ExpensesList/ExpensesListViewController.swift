@@ -21,7 +21,6 @@ class ExpensesListViewController: UIViewController {
     // MARK: - View Model
     private let viewModel: ExpensesListViewModel
     private var expensesTableViewDataSource: ExpensesTableViewDataSource!
-    private var expensesTableViewDelegate = ExpensesTableViewDelegate()
 
     // MARK: - Constructor
     init(withViewModel viewModel: ExpensesListViewModel = ExpensesListViewModel()) {
@@ -36,7 +35,7 @@ class ExpensesListViewController: UIViewController {
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        expensesTableView.delegate = expensesTableViewDelegate
+        expensesTableView.delegate = self
         setUpBalanceView()
         observeChanges()
         viewModel.loadExpensesData()
@@ -76,5 +75,25 @@ class ExpensesListViewController: UIViewController {
             self.expensesTableView.dataSource = self.expensesTableViewDataSource
             self.expensesTableView.reloadData()
         }
+    }
+}
+
+extension ExpensesListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard indexPath.row != 0 else {
+            return nil
+        }
+
+        let item = UIContextualAction(style: .destructive, title: "Delete") {  (_, _, _) in
+            self.viewModel.deleteExpense(at: indexPath)
+        }
+
+        let swipeActions = UISwipeActionsConfiguration(actions: [item])
+        return swipeActions
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        RoudedSectionTableView.tableView(tableView, willDisplay: cell, forRowAt: indexPath)
     }
 }
