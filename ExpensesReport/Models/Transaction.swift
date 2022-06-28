@@ -14,8 +14,8 @@ struct Transaction {
     let transaction: TransactionType
 }
 
-enum TransactionType {
-case expense, income
+enum TransactionType: String, CaseIterable {
+case expense = "Expense", income = "Income"
 }
 
 struct Summary {
