@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionListViewController: UIViewController {
+class TransactionListViewController: UIViewController, AddTransactionViewControllerDelegate {
 
     // MARK: - Balance view properties
     @IBOutlet weak var expensesAmountLabel: UILabel!
@@ -89,10 +89,10 @@ class TransactionListViewController: UIViewController {
             self.expensesTableView.reloadData()
         }
     }
-    
-    // MARK: - Add transaction
 
+    // MARK: - Add transaction
     @objc func openAddTransactionController() {
+        addTransactionController.setDelegate(self)
         present(addTransactionController, animated: true)
     }
 
@@ -102,6 +102,10 @@ class TransactionListViewController: UIViewController {
         addTransactionViewController.modalTransitionStyle = .crossDissolve
         return addTransactionViewController
     }()
+
+    func transactionCreated(_ transaction: Transaction) {
+        viewModel.transactionCreated(transaction)
+    }
 }
 
 extension TransactionListViewController: UITableViewDelegate {
