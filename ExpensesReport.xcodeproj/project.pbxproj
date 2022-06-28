@@ -33,6 +33,7 @@
 		6D69926F286B72F800AC033B /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69926D286B72F800AC033B /* AddTransactionViewController.swift */; };
 		6D699270286B72F800AC033B /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D69926E286B72F800AC033B /* AddTransactionViewController.xib */; };
 		6D699273286BA61D00AC033B /* TransactionInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699272286BA61D00AC033B /* TransactionInputValidation.swift */; };
+		6D699275286BAA2D00AC033B /* AddTransactionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699274286BAA2D00AC033B /* AddTransactionViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		6D69926D286B72F800AC033B /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		6D69926E286B72F800AC033B /* AddTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
 		6D699272286BA61D00AC033B /* TransactionInputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInputValidation.swift; sourceTree = "<group>"; };
+		6D699274286BAA2D00AC033B /* AddTransactionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				6D699271286B9B8300AC033B /* Validation */,
 				6D69926D286B72F800AC033B /* AddTransactionViewController.swift */,
 				6D69926E286B72F800AC033B /* AddTransactionViewController.xib */,
+				6D699274286BAA2D00AC033B /* AddTransactionViewControllerDelegate.swift */,
 			);
 			path = AddTransaction;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				6D6992322867997D00AC033B /* TransactionListViewController.swift in Sources */,
 				6D69924D286812A100AC033B /* Date.swift in Sources */,
 				6D6991FB2867826800AC033B /* SceneDelegate.swift in Sources */,
+				6D699275286BAA2D00AC033B /* AddTransactionViewControllerDelegate.swift in Sources */,
 				6D69923B2867B45C00AC033B /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
