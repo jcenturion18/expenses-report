@@ -30,11 +30,11 @@ struct Summary {
 }
 
 struct ExpensesListData {
-    let expenses: [ExpensesByDay]
+    var expenses: [ExpensesByDay]
     let summary: Summary
 }
 
 struct ExpensesByDay {
     let title: String
-    let expenses: [Expense]
+    var expenses: [Expense]
 }
