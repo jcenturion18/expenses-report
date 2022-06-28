@@ -24,8 +24,11 @@ class ExpensesTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable:next force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseTableViewCell.description()) as! ExpenseTableViewCell
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: ExpenseTableViewCell.description()
+        ) as! ExpenseTableViewCell
+        // swiftlint:enable force_cast
 
         if indexPath.row == 0 {
             cell.setUp(withExpensesByDay: expenses[indexPath.section])
