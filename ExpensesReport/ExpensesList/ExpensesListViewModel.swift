@@ -37,6 +37,13 @@ class ExpensesListViewModel {
 
         return ExpensesListData(expenses: expenses.toExpensesByDayArray(), summary: summary)
     }
+
+    func deleteExpense(at indexPath: IndexPath) {
+        expensesListData.expenses[indexPath.section].expenses.remove(at: indexPath.row - 1)
+        if expensesListData.expenses[indexPath.section].expenses.count == 0 {
+            expensesListData.expenses.remove(at: indexPath.section)
+        }
+    }
 }
 
 // TODO: Remove
