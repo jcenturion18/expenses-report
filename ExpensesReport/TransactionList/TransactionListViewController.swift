@@ -55,7 +55,7 @@ class TransactionListViewController: UIViewController {
     }
 
     func setUpBalanceView() {
-        balanceBackgroundView.rondedView()
+        balanceBackgroundView.roundedView()
     }
 
     func setUpPlusButton() {

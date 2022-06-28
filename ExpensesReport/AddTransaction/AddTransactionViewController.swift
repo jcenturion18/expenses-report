@@ -12,7 +12,7 @@ class AddTransactionViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerView.rondedView()
+        containerView.roundedView()
         let backgroundTap = UITapGestureRecognizer(target: self, action: #selector(dismissController))
         view.addGestureRecognizer(backgroundTap)
     }

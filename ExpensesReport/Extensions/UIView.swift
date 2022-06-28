@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
 
-    func rondedView() {
+    func roundedView() {
         backgroundColor = .white
         layer.cornerRadius = 6
         clipsToBounds = true

@@ -12,7 +12,7 @@ class UIViewTests: XCTestCase {
 
     func testRoundedBorders() throws {
         let view = UIView()
-        view.rondedView()
+        view.roundedView()
 
         XCTAssertTrue(view.clipsToBounds)
         XCTAssertEqual(.white, view.backgroundColor)
