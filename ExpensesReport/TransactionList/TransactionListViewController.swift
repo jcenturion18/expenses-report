@@ -36,8 +36,7 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactionsTableView.delegate = self
-        transactionsTableView.dataSource = self.transactionsTableViewDataSource
+        setUpTableView()
         setUpBalanceView()
         setUpPlusButton()
         observeChanges()
@@ -55,6 +54,11 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
                                    forCellReuseIdentifier: TransactionTableViewCell.description())
     }
 
+    func setUpTableView() {
+        transactionsTableView.delegate = self
+        transactionsTableView.dataSource = self.transactionsTableViewDataSource
+    }
+    
     func setUpBalanceView() {
         balanceBackgroundView.roundedView()
     }
