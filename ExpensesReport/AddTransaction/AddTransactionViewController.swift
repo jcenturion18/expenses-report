@@ -54,7 +54,7 @@ class AddTransactionViewController: UIViewController {
         if keyboardIsPresent {
             view.endEditing(true)
         } else {
-            dismiss(animated: true, completion: nil)
+            dissmissViewController()
         }
     }
 
@@ -84,7 +84,12 @@ class AddTransactionViewController: UIViewController {
         }
         if let transaction = validInput.1 {
             delegate.transactionCreated(transaction)
+            dissmissViewController()
         }
+    }
+
+    func dissmissViewController() {
+        dismiss(animated: true, completion: nil)
     }
 
     func showErrorAlert() {
