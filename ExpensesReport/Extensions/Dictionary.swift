@@ -17,6 +17,9 @@ extension Dictionary where Key == String, Value == [Transaction] {
             transactionsByDay.append(TransactionsByDay(title: date, transactions: transactions))
         }
 
+        transactionsByDay = transactionsByDay.sorted {
+            $0.transactions[0].date.compare($1.transactions[0].date) == .orderedDescending
+        }
         return transactionsByDay
     }
 }
