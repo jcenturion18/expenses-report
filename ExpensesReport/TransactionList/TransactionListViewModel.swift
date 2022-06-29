@@ -7,9 +7,14 @@
 
 import Foundation
 
-protocol TransactionListViewModel : AnyClass {}
+protocol TransactionListViewModel: AnyObject {
+    var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) { get set }
+    func loadExpensesData()
+    func transactionCreated(_ transaction: Transaction)
+    func deleteExpense(at indexPath: IndexPath)
+}
 
-class TransactionListViewModelImp {
+class TransactionListViewModelImp: TransactionListViewModel {
 
     private var transactionListData: TransactionListData! {
         didSet {
@@ -27,7 +32,6 @@ class TransactionListViewModelImp {
         ]
 
         transactionListData = proccess(expenses: expenses)
-
     }
 
     func proccess(expenses: [Transaction]) -> TransactionListData {
