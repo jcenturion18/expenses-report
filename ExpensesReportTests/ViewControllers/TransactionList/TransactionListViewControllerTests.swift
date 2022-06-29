@@ -14,8 +14,8 @@ class TransactionListViewControllerTests: XCTestCase {
         let viewController = TransactionListViewController(withViewModel: mockViewModel)
         _ = viewController.view
 
-        XCTAssertEqual(1, viewController.expensesTableView.numberOfSections)
-        XCTAssertEqual(3, viewController.expensesTableView.numberOfRows(inSection: 0))
+        XCTAssertEqual(1, viewController.transactionsTableView.numberOfSections)
+        XCTAssertEqual(3, viewController.transactionsTableView.numberOfRows(inSection: 0))
         XCTAssertEqual("$ 10.0", viewController.incomeAmountLabel.text)
         XCTAssertEqual("$ 7.0", viewController.expensesAmountLabel.text)
         XCTAssertEqual("$ 3.0", viewController.balanceAmountLabel.text)

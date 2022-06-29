@@ -17,21 +17,21 @@ extension Array where Element == Transaction {
     }
 
     private func toDictionary() -> [String: [Transaction]] {
-        var expensesDictionary = [String: [Transaction]]()
+        var transactionsDictionary = [String: [Transaction]]()
 
         forEach {
             let dateAsString = $0.date.toString()
-            if expensesDictionary.keys.contains(dateAsString) {
-                expensesDictionary[dateAsString]!.append($0)
+            if transactionsDictionary.keys.contains(dateAsString) {
+                transactionsDictionary[dateAsString]!.append($0)
             } else {
-                expensesDictionary[dateAsString] = [Transaction]()
-                expensesDictionary[dateAsString]!.append($0)
+                transactionsDictionary[dateAsString] = [Transaction]()
+                transactionsDictionary[dateAsString]!.append($0)
             }
         }
-        return expensesDictionary
+        return transactionsDictionary
     }
 
-    func toExpensesByDayArray() -> [TransactionsByDay] {
+    func toTransactionsByDayArray() -> [TransactionsByDay] {
         toDictionary().toObject()
     }
 }

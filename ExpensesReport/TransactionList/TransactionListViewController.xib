@@ -13,10 +13,10 @@
                 <outlet property="balanceAmountLabel" destination="Duk-2p-9CA" id="jdx-C9-ift"/>
                 <outlet property="balanceBackgroundView" destination="YNd-sH-IfW" id="wf8-xn-ouR"/>
                 <outlet property="expensesAmountLabel" destination="R3T-UH-akr" id="cKC-Mu-YKy"/>
-                <outlet property="expensesTableView" destination="npY-tG-UA0" id="Qgd-dN-TqV"/>
                 <outlet property="incomeAmountLabel" destination="j2r-xT-e2C" id="xSz-vX-O0e"/>
                 <outlet property="plusButton" destination="VTJ-VH-CsY" id="OBh-kD-5LG"/>
                 <outlet property="progressBar" destination="O3z-Xp-NK5" id="P6B-p8-gHE"/>
+                <outlet property="transactionsTableView" destination="npY-tG-UA0" id="Qgd-dN-TqV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

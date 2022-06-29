@@ -1,5 +1,5 @@
 //
-//  Expenses.swift
+//  Transaction.swift
 //  ExpensesReport
 //
 //  Created by Julian Centurion on 25/06/2022.
@@ -36,5 +36,5 @@ struct TransactionListData {
 
 struct TransactionsByDay {
     let title: String
-    var expenses: [Transaction]
+    var transactions: [Transaction]
 }

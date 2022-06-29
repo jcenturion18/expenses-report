@@ -12,12 +12,12 @@ class TransactionListViewModelMock: TransactionListViewModel {
 
     var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) = {_ in }
 
-    func loadExpensesData() {
+    func loadTransactionsData() {
         let transactionListData = TransactionListData(
             transactions: [
                 TransactionsByDay(
                     title: "12th January, 1990",
-                    expenses: [
+                    transactions: [
                         Transaction(description: "Salary",
                                     date: "30/05/2022".toDate(),
                                     amount: 10,
@@ -39,7 +39,7 @@ class TransactionListViewModelMock: TransactionListViewModel {
 
     }
 
-    func deleteExpense(at indexPath: IndexPath) {
+    func deleteTransaction(at indexPath: IndexPath) {
 
     }
 }

@@ -9,9 +9,9 @@ import Foundation
 
 protocol TransactionListViewModel: AnyObject {
     var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) { get set }
-    func loadExpensesData()
+    func loadTransactionsData()
     func transactionCreated(_ transaction: Transaction)
-    func deleteExpense(at indexPath: IndexPath)
+    func deleteTransaction(at indexPath: IndexPath)
 }
 
 class TransactionListViewModelImp: TransactionListViewModel {
@@ -24,29 +24,29 @@ class TransactionListViewModelImp: TransactionListViewModel {
 
     var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) = {_ in }
 
-    func loadExpensesData() {
-        let expenses = [
+    func loadTransactionsData() {
+        let transactions = [
             Transaction(description: "Salary", date: "30/05/2022".toDate(), amount: 10, transaction: .income),
             Transaction(description: "Coffee", date: "26/05/2022".toDate(), amount: 7, transaction: .expense),
             Transaction(description: "Salary", date: "26/05/2022".toDate(), amount: 10, transaction: .income)
         ]
 
-        transactionListData = proccess(expenses: expenses)
+        transactionListData = proccess(transactions: transactions)
     }
 
-    func proccess(expenses: [Transaction]) -> TransactionListData {
+    func proccess(transactions: [Transaction]) -> TransactionListData {
 
-        let totalIncome = expenses.totalIncome()
-        let totalExpenses = expenses.totalExpenses()
+        let totalIncome = transactions.totalIncome()
+        let totalExpenses = transactions.totalExpenses()
 
         let summary = Summary(income: totalIncome, expenses: totalExpenses)
 
-        return TransactionListData(transactions: expenses.toExpensesByDayArray(), summary: summary)
+        return TransactionListData(transactions: transactions.toTransactionsByDayArray(), summary: summary)
     }
 
-    func deleteExpense(at indexPath: IndexPath) {
-        transactionListData.transactions[indexPath.section].expenses.remove(at: indexPath.row - 1)
-        if transactionListData.transactions[indexPath.section].expenses.count == 0 {
+    func deleteTransaction(at indexPath: IndexPath) {
+        transactionListData.transactions[indexPath.section].transactions.remove(at: indexPath.row - 1)
+        if transactionListData.transactions[indexPath.section].transactions.count == 0 {
             transactionListData.transactions.remove(at: indexPath.section)
         }
     }

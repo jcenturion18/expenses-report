@@ -11,12 +11,12 @@ extension Dictionary where Key == String, Value == [Transaction] {
 
     func toObject() -> [TransactionsByDay] {
 
-        var expensesByDay = [TransactionsByDay]()
+        var transactionsByDay = [TransactionsByDay]()
 
-        for(date, expenses) in self {
-            expensesByDay.append(TransactionsByDay(title: date, expenses: expenses))
+        for(date, transactions) in self {
+            transactionsByDay.append(TransactionsByDay(title: date, transactions: transactions))
         }
 
-        return expensesByDay
+        return transactionsByDay
     }
 }

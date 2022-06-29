@@ -10,7 +10,7 @@ import XCTest
 
 class TransactionTableViewCellTests: XCTestCase {
 
-    func testSetUpViewWithExpenseIncome() throws {
+    func testSetUpViewWithTransactionIncome() throws {
 
         let cell = TransactionTableViewCell.loadNib()
 
@@ -19,13 +19,13 @@ class TransactionTableViewCellTests: XCTestCase {
                               amount: 10,
                               transaction: .income)
 
-        cell.setUp(withExpense: expense)
+        cell.setUp(withTransaction: expense)
 
         XCTAssertEqual("Description", cell.titleLabel.text)
         XCTAssertEqual("$10.0", cell.accesoryLabel.text)
     }
 
-    func testSetUpViewWithExpenseNegativeExpense() throws {
+    func testSetUpViewWithTransactionNegativeExpense() throws {
         let cell = TransactionTableViewCell.loadNib()
 
         let expense = Transaction(description: "Description",
@@ -33,7 +33,7 @@ class TransactionTableViewCellTests: XCTestCase {
                               amount: 10,
                               transaction: .expense)
 
-        cell.setUp(withExpense: expense)
+        cell.setUp(withTransaction: expense)
 
         XCTAssertEqual("Description", cell.titleLabel.text)
         XCTAssertEqual("- $10.0", cell.accesoryLabel.text)
@@ -42,9 +42,9 @@ class TransactionTableViewCellTests: XCTestCase {
     func testSetUpViewWithExpensesByDay() throws {
         let cell = TransactionTableViewCell.loadNib()
 
-        let expensesByDay = TransactionsByDay(title: "Day", expenses: [])
+        let expensesByDay = TransactionsByDay(title: "Day", transactions: [])
 
-        cell.setUp(withExpensesByDay: expensesByDay)
+        cell.setUp(withTransactionsByDay: expensesByDay)
 
         XCTAssertEqual("Day", cell.titleLabel.text)
         XCTAssertEqual("", cell.accesoryLabel.text)

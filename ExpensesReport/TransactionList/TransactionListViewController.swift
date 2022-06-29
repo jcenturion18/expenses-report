@@ -18,10 +18,10 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     @IBOutlet weak var plusButton: UIView!
 
     // MARK: - Table view
-    @IBOutlet weak var expensesTableView: UITableView!
+    @IBOutlet weak var transactionsTableView: UITableView!
     // MARK: - View Model
     private let viewModel: TransactionListViewModel
-    private var expensesTableViewDataSource = TransactionTableViewDataSource()
+    private var transactionsTableViewDataSource = TransactionTableViewDataSource()
 
     // MARK: - Constructor
     init(withViewModel viewModel: TransactionListViewModel = TransactionListViewModelImp()) {
@@ -36,22 +36,22 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     // MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        expensesTableView.delegate = self
-        expensesTableView.dataSource = self.expensesTableViewDataSource
+        transactionsTableView.delegate = self
+        transactionsTableView.dataSource = self.transactionsTableViewDataSource
         setUpBalanceView()
         setUpPlusButton()
         observeChanges()
         registerCellsOnTableView()
-        viewModel.loadExpensesData()
+        viewModel.loadTransactionsData()
     }
 
     // MARK: View
     func registerCellsOnTableView() {
-        let expenseTableViewCell = UINib(
+        let transactionTableViewCell = UINib(
             nibName: String.init(describing: TransactionTableViewCell.self),
             bundle: Bundle.main)
 
-        expensesTableView.register(expenseTableViewCell,
+        transactionsTableView.register(transactionTableViewCell,
                                    forCellReuseIdentifier: TransactionTableViewCell.description())
     }
 
@@ -83,10 +83,10 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     }
 
     func update(transactionsTable data: [TransactionsByDay]) {
-        expensesTableViewDataSource.update(transactions: data)
+        transactionsTableViewDataSource.update(transactions: data)
 
         DispatchQueue.main.async {
-            self.expensesTableView.reloadData()
+            self.transactionsTableView.reloadData()
         }
     }
 
@@ -117,7 +117,7 @@ extension TransactionListViewController: UITableViewDelegate {
         }
 
         let item = UIContextualAction(style: .destructive, title: "Delete") {  (_, _, _) in
-            self.viewModel.deleteExpense(at: indexPath)
+            self.viewModel.deleteTransaction(at: indexPath)
         }
 
         let swipeActions = UISwipeActionsConfiguration(actions: [item])

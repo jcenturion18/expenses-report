@@ -34,10 +34,10 @@ class ArrayTests: XCTestCase {
             Transaction(description: "Coffee", date: "12/01/1990".toDate(), amount: 7, transaction: .expense)
         ]
 
-        let expensesByDayArray = expenses.toExpensesByDayArray()
+        let expensesByDayArray = expenses.toTransactionsByDayArray()
         XCTAssertEqual(1, expensesByDayArray.count)
         XCTAssertEqual("12th January, 1990", expensesByDayArray[0].title)
-        XCTAssertEqual(2, expensesByDayArray[0].expenses.count)
+        XCTAssertEqual(2, expensesByDayArray[0].transactions.count)
     }
 
 }

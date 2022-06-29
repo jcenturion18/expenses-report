@@ -9,18 +9,18 @@ import UIKit
 
 class TransactionTableViewDataSource: NSObject, UITableViewDataSource {
 
-    let expenses: [TransactionsByDay]
-    init(withExpensesByDayArray data: [TransactionsByDay]) {
-        self.expenses = data
-        super.init()
+    private var transactions: [TransactionsByDay] = []
+
+    func update(transactions: [TransactionsByDay]) {
+        self.transactions = transactions
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        expenses[section].expenses.count + 1 // Add one so we can use the header as a row
+        transactions[section].transactions.count + 1 // Add one so we can use the header as a row
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        expenses.count
+        transactions.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,9 +31,9 @@ class TransactionTableViewDataSource: NSObject, UITableViewDataSource {
         // swiftlint:enable force_cast
 
         if indexPath.row == 0 {
-            cell.setUp(withExpensesByDay: expenses[indexPath.section])
+            cell.setUp(withTransactionsByDay: transactions[indexPath.section])
         } else {
-            cell.setUp(withExpense: expenses[indexPath.section].expenses[indexPath.row - 1])
+            cell.setUp(withTransaction: transactions[indexPath.section].transactions[indexPath.row - 1])
         }
         return cell
     }

@@ -12,13 +12,13 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var accesoryLabel: UILabel!
 
-    func setUp(withExpense expense: Transaction) {
-        titleLabel.text = expense.description
-        accesoryLabel.text = processAmount(value: expense.amount, for: expense.transaction)
+    func setUp(withTransaction transaction: Transaction) {
+        titleLabel.text = transaction.description
+        accesoryLabel.text = processAmount(value: transaction.amount, for: transaction.transaction)
     }
 
-    func setUp(withExpensesByDay expenses: TransactionsByDay) {
-        titleLabel.text = expenses.title
+    func setUp(withTransactionsByDay transactions: TransactionsByDay) {
+        titleLabel.text = transactions.title
         accesoryLabel.text = ""
     }
 
