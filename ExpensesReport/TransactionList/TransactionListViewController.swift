@@ -21,10 +21,10 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     @IBOutlet weak var expensesTableView: UITableView!
     // MARK: - View Model
     private let viewModel: TransactionListViewModel
-    private var expensesTableViewDataSource: TransactionTableViewDataSource!
+    private var expensesTableViewDataSource = TransactionTableViewDataSource()
 
     // MARK: - Constructor
-    init(withViewModel viewModel: TransactionListViewModel = TransactionListViewModel()) {
+    init(withViewModel viewModel: TransactionListViewModel = TransactionListViewModelImp()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,6 +37,7 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     override func viewDidLoad() {
         super.viewDidLoad()
         expensesTableView.delegate = self
+        expensesTableView.dataSource = self.expensesTableViewDataSource
         setUpBalanceView()
         setUpPlusButton()
         observeChanges()
@@ -82,10 +83,9 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
     }
 
     func update(transactionsTable data: [TransactionsByDay]) {
-        expensesTableViewDataSource = TransactionTableViewDataSource(withExpensesByDayArray: data)
+        expensesTableViewDataSource.update(transactions: data)
 
         DispatchQueue.main.async {
-            self.expensesTableView.dataSource = self.expensesTableViewDataSource
             self.expensesTableView.reloadData()
         }
     }
