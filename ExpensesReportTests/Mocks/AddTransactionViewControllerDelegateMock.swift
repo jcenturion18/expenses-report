@@ -6,3 +6,12 @@
 //
 
 import Foundation
+@testable import ExpensesReport
+
+class AddTransactionViewControllerDelegateMock: AddTransactionViewControllerDelegate {
+    var transaction: Transaction!
+
+    func transactionCreated(_ transaction: Transaction) {
+        self.transaction = transaction
+    }
+}
