@@ -16,6 +16,16 @@ protocol TransactionListViewModel: AnyObject {
 
 class TransactionListViewModelImp: TransactionListViewModel {
 
+    private var transactions = [
+        Transaction(description: "Salary", date: "30/05/2022".toDate(), amount: 10, transaction: .income),
+        Transaction(description: "Coffee", date: "26/05/2022".toDate(), amount: 7, transaction: .expense),
+        Transaction(description: "Salary", date: "26/05/2022".toDate(), amount: 10, transaction: .income)
+    ] {
+        didSet {
+            loadTransactionsData()
+        }
+    }
+
     private var transactionListData: TransactionListData! {
         didSet {
             bindViewModelToController(transactionListData)
@@ -25,12 +35,6 @@ class TransactionListViewModelImp: TransactionListViewModel {
     var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) = {_ in }
 
     func loadTransactionsData() {
-        let transactions = [
-            Transaction(description: "Salary", date: "30/05/2022".toDate(), amount: 10, transaction: .income),
-            Transaction(description: "Coffee", date: "26/05/2022".toDate(), amount: 7, transaction: .expense),
-            Transaction(description: "Salary", date: "26/05/2022".toDate(), amount: 10, transaction: .income)
-        ]
-
         transactionListData = proccess(transactions: transactions)
     }
 
@@ -52,7 +56,7 @@ class TransactionListViewModelImp: TransactionListViewModel {
     }
 
     func transactionCreated(_ transaction: Transaction) {
-        print(transaction)
+        transactions.append(transaction)
     }
 }
 
