@@ -37,6 +37,8 @@
 		6D699278286BAC0C00AC033B /* TransactionInputValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699277286BAC0C00AC033B /* TransactionInputValidationTests.swift */; };
 		6D69927C286C896300AC033B /* TransactionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69927B286C896300AC033B /* TransactionListViewControllerTests.swift */; };
 		6D69927F286CD89B00AC033B /* TransactionListViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69927E286CD89B00AC033B /* TransactionListViewModelMock.swift */; };
+		6D699282286CEFD100AC033B /* AddTransactionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699281286CEFD100AC033B /* AddTransactionViewControllerTests.swift */; };
+		6D699284286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699283286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		6D699277286BAC0C00AC033B /* TransactionInputValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInputValidationTests.swift; sourceTree = "<group>"; };
 		6D69927B286C896300AC033B /* TransactionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerTests.swift; sourceTree = "<group>"; };
 		6D69927E286CD89B00AC033B /* TransactionListViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelMock.swift; sourceTree = "<group>"; };
+		6D699281286CEFD100AC033B /* AddTransactionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewControllerTests.swift; sourceTree = "<group>"; };
+		6D699283286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewControllerDelegateMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,7 @@
 		6D699279286C893500AC033B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6D699280286CEE9500AC033B /* AddTransaction */,
 				6D69927A286C893D00AC033B /* TransactionList */,
 			);
 			path = ViewControllers;
@@ -274,8 +279,17 @@
 			isa = PBXGroup;
 			children = (
 				6D69927E286CD89B00AC033B /* TransactionListViewModelMock.swift */,
+				6D699283286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		6D699280286CEE9500AC033B /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				6D699281286CEFD100AC033B /* AddTransactionViewControllerTests.swift */,
+			);
+			path = AddTransaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6992452867FAE600AC033B /* FloatTests.swift in Sources */,
+				6D699284286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift in Sources */,
 				6D699278286BAC0C00AC033B /* TransactionInputValidationTests.swift in Sources */,
 				6D699264286B485A00AC033B /* TransactionTableViewCellTests.swift in Sources */,
 				6D69923E2867F3BB00AC033B /* ArrayTests.swift in Sources */,
@@ -413,6 +428,7 @@
 				6D699266286B6B9100AC033B /* UIView+Tests.swift in Sources */,
 				6D699261286B3CF000AC033B /* DateTests.swift in Sources */,
 				6D69927C286C896300AC033B /* TransactionListViewControllerTests.swift in Sources */,
+				6D699282286CEFD100AC033B /* AddTransactionViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
