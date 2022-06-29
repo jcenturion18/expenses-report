@@ -7,7 +7,9 @@
 
 import Foundation
 
-class TransactionListViewModel {
+protocol TransactionListViewModel : AnyClass {}
+
+class TransactionListViewModelImp {
 
     private var transactionListData: TransactionListData! {
         didSet {
