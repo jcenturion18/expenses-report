@@ -58,7 +58,7 @@ class TransactionListViewController: UIViewController, AddTransactionViewControl
         transactionsTableView.delegate = self
         transactionsTableView.dataSource = self.transactionsTableViewDataSource
     }
-    
+
     func setUpBalanceView() {
         balanceBackgroundView.roundedView()
     }
