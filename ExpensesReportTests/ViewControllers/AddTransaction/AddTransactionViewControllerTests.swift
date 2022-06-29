@@ -6,30 +6,43 @@
 //
 
 import XCTest
+@testable import ExpensesReport
 
 class AddTransactionViewControllerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testAddActionValidData() throws {
+        let viewController = AddTransactionViewController()
+
+        let delegate = AddTransactionViewControllerDelegateMock()
+        viewController.setDelegate(delegate)
+
+        _ = viewController.view
+
+        // swiftlint:disable force_cast
+        let picker = viewController.transactionTypeInput.inputView as! UIPickerView
+        // swiftlint:enable force_cast
+        viewController.pickerView(picker, didSelectRow: 0, inComponent: 0)
+        viewController.transactionDescriptionInput.text = "Description"
+        viewController.amountInput.text = "100"
+
+        viewController.addAction(self)
+
+        XCTAssertNotNil(delegate.transaction)
+        XCTAssertEqual("Description", delegate.transaction.description)
+        XCTAssertEqual(100, delegate.transaction.amount)
+        XCTAssertEqual(TransactionType.expense, delegate.transaction.transaction)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testAddActionIndalidData() throws {
+        let viewController = AddTransactionViewController()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        let delegate = AddTransactionViewControllerDelegateMock()
+        viewController.setDelegate(delegate)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        _ = viewController.view
 
+        viewController.addAction(self)
+
+        XCTAssertNil(delegate.transaction)
+    }
 }
