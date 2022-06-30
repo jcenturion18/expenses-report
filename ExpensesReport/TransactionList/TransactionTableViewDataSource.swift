@@ -24,11 +24,10 @@ class TransactionTableViewDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable force_cast
+
         let cell = tableView.dequeueReusableCell(
             withIdentifier: TransactionTableViewCell.description()
-        ) as! TransactionTableViewCell
-        // swiftlint:enable force_cast
+        ) as! TransactionTableViewCell // swiftlint:disable:this force_cast
 
         if indexPath.row == 0 {
             cell.setUp(withTransactionsByDay: transactions[indexPath.section])

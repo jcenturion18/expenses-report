@@ -18,9 +18,7 @@ class AddTransactionViewControllerTests: XCTestCase {
 
         _ = viewController.view
 
-        // swiftlint:disable force_cast
-        let picker = viewController.transactionTypeInput.inputView as! UIPickerView
-        // swiftlint:enable force_cast
+        let picker = viewController.transactionTypeInput.inputView as! UIPickerView // swiftlint:disable:this force_cast
         viewController.pickerView(picker, didSelectRow: 0, inComponent: 0)
         viewController.transactionDescriptionInput.text = "Description"
         viewController.amountInput.text = "100"

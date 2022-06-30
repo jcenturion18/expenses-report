@@ -114,8 +114,7 @@ class AddTransactionViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // swiftlint:disable notification_center_detachment
-        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self) // swiftlint:disable:this notification_center_detachment
     }
 }
 
