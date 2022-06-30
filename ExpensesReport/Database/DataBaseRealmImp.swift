@@ -47,19 +47,17 @@ class DataBaseRealmImp: DataBase {
     }
 
     func retrieveTransactions() -> [Transaction] {
-        let transactionsDAO = localRealm.objects(TransactionDAO.self)
+        var transactionsList: [Transaction] = []
 
-        var transactions: [Transaction] = []
-
-        transactionsDAO.forEach {
-            transactions.append( $0.toTransaction() )
+        transactions.forEach {
+            transactionsList.append( $0.toTransaction() )
         }
 
-        return transactions
+        return transactionsList
     }
 
     func delete(transaction: Transaction) {
-        let transactionToDelete = localRealm.objects(TransactionDAO.self).where {
+        let transactionToDelete = transactions.where {
             $0.id == transaction.id
         }
 
