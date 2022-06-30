@@ -14,7 +14,7 @@ class TransactionTableViewCell: UITableViewCell {
 
     func setUp(withTransaction transaction: Transaction) {
         titleLabel.text = transaction.description
-        accesoryLabel.text = processAmount(value: transaction.amount, for: transaction.transaction)
+        accesoryLabel.text = processAmount(value: transaction.amount, for: transaction.type)
     }
 
     func setUp(withTransactionsByDay transactions: TransactionsByDay) {

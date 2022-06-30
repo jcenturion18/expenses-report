@@ -9,11 +9,11 @@ import Foundation
 
 extension Array where Element == Transaction {
     func totalIncome() -> Float {
-        filter { $0.transaction == .income}.reduce(0) {$0 + $1.amount}
+        filter { $0.type == .income}.reduce(0) {$0 + $1.amount}
     }
 
     func totalExpenses() -> Float {
-        filter { $0.transaction == .expense}.reduce(0) {$0 + $1.amount}
+        filter { $0.type == .expense}.reduce(0) {$0 + $1.amount}
     }
 
     private func toDictionary() -> [String: [Transaction]] {

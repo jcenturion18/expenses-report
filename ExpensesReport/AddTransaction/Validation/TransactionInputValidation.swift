@@ -25,7 +25,7 @@ class TransactionInputValidation {
         let transaction = Transaction(description: description,
                                       date: Date.now,
                                       amount: amountFloat,
-                                      transaction: transactionType)
+                                      type: transactionType)
 
         return(true, transaction)
     }

@@ -30,7 +30,7 @@ class AddTransactionViewControllerTests: XCTestCase {
         XCTAssertNotNil(delegate.transaction)
         XCTAssertEqual("Description", delegate.transaction.description)
         XCTAssertEqual(100, delegate.transaction.amount)
-        XCTAssertEqual(TransactionType.expense, delegate.transaction.transaction)
+        XCTAssertEqual(TransactionType.expense, delegate.transaction.type)
     }
 
     func testAddActionIndalidData() throws {

@@ -8,10 +8,24 @@
 import Foundation
 
 struct Transaction {
+
     let description: String
     let date: Date
     let amount: Float
-    let transaction: TransactionType
+    let type: TransactionType
+    let id: String
+
+    init (description: String,
+          date: Date,
+          amount: Float,
+          type: TransactionType,
+          id: String = UUID().uuidString) {
+        self.description = description
+        self.date = date
+        self.amount = amount
+        self.type = type
+        self.id = id
+    }
 }
 
 enum TransactionType: String, CaseIterable {
