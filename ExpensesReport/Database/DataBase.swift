@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol DataBase: AnyObject {
+    func retrieveTransactions() -> [Transaction]
+    func store(transaction: Transaction)
+    func delete(transaction: Transaction)
+    var observer : ((_ transactions: [Transaction]) -> Void)? { get set }
+}
