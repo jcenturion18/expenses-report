@@ -44,6 +44,8 @@
 		6D69928C286E10C600AC033B /* DataBaseRealmImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69928B286E10C500AC033B /* DataBaseRealmImp.swift */; };
 		6D69928E286E10D500AC033B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69928D286E10D500AC033B /* DataBase.swift */; };
 		6D699290286E112300AC033B /* TransactionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69928F286E112300AC033B /* TransactionDAO.swift */; };
+		6D699293286E4A6B00AC033B /* TransactionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699292286E4A6B00AC033B /* TransactionListViewModelTests.swift */; };
+		6D699295286E757800AC033B /* String+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D699294286E757700AC033B /* String+Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		6D69928B286E10C500AC033B /* DataBaseRealmImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseRealmImp.swift; sourceTree = "<group>"; };
 		6D69928D286E10D500AC033B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		6D69928F286E112300AC033B /* TransactionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDAO.swift; sourceTree = "<group>"; };
+		6D699292286E4A6B00AC033B /* TransactionListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelTests.swift; sourceTree = "<group>"; };
+		6D699294286E757700AC033B /* String+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		6D69920E2867826B00AC033B /* ExpensesReportTests */ = {
 			isa = PBXGroup;
 			children = (
+				6D699291286E4A5800AC033B /* ViewModels */,
 				6D69927D286CD88E00AC033B /* Mocks */,
 				6D699279286C893500AC033B /* ViewControllers */,
 				6D699276286BABF700AC033B /* Validation */,
@@ -213,6 +218,7 @@
 				6D699246286802D100AC033B /* UIViewTests.swift */,
 				6D699260286B3CF000AC033B /* DateTests.swift */,
 				6D699265286B6B9100AC033B /* UIView+Tests.swift */,
+				6D699294286E757700AC033B /* String+Tests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +317,14 @@
 				6D69928F286E112300AC033B /* TransactionDAO.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		6D699291286E4A5800AC033B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6D699292286E4A6B00AC033B /* TransactionListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,10 +466,12 @@
 				6D6992452867FAE600AC033B /* FloatTests.swift in Sources */,
 				6D699284286CFAC300AC033B /* AddTransactionViewControllerDelegateMock.swift in Sources */,
 				6D699278286BAC0C00AC033B /* TransactionInputValidationTests.swift in Sources */,
+				6D699295286E757800AC033B /* String+Tests.swift in Sources */,
 				6D699264286B485A00AC033B /* TransactionTableViewCellTests.swift in Sources */,
 				6D69923E2867F3BB00AC033B /* ArrayTests.swift in Sources */,
 				6D69927F286CD89B00AC033B /* TransactionListViewModelMock.swift in Sources */,
 				6D699247286802D100AC033B /* UIViewTests.swift in Sources */,
+				6D699293286E4A6B00AC033B /* TransactionListViewModelTests.swift in Sources */,
 				6D699266286B6B9100AC033B /* UIView+Tests.swift in Sources */,
 				6D699261286B3CF000AC033B /* DateTests.swift in Sources */,
 				6D69927C286C896300AC033B /* TransactionListViewControllerTests.swift in Sources */,
