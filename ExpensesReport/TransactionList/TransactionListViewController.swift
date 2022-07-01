@@ -121,7 +121,8 @@ extension TransactionListViewController: UITableViewDelegate {
         }
 
         let item = UIContextualAction(style: .destructive, title: "Delete") {  (_, _, _) in
-            self.viewModel.deleteTransaction(at: indexPath)
+            let transaction = self.viewModel.transaction(for: indexPath)
+            self.viewModel.delete(transaction: transaction)
         }
 
         let swipeActions = UISwipeActionsConfiguration(actions: [item])
