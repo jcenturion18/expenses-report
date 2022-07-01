@@ -43,7 +43,14 @@ class TransactionListViewModelMock: TransactionListViewModel {
 
     }
 
-    func deleteTransaction(at indexPath: IndexPath) {
+    func transaction(for indexPath: IndexPath) -> Transaction {
+        Transaction(description: "Salary",
+                    date: "30/05/2022".toDate(),
+                    amount: 10,
+                    type: .income)
+    }
+
+    func delete(transaction: Transaction) {
 
     }
 }
