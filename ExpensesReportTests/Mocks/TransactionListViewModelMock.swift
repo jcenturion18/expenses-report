@@ -10,6 +10,10 @@ import Foundation
 
 class TransactionListViewModelMock: TransactionListViewModel {
 
+    required init(withDB database: DataBase) {
+
+    }
+
     var bindViewModelToController : ((_ transactionListData: TransactionListData) -> Void) = {_ in }
 
     func loadTransactionsData() {
@@ -21,11 +25,11 @@ class TransactionListViewModelMock: TransactionListViewModel {
                         Transaction(description: "Salary",
                                     date: "30/05/2022".toDate(),
                                     amount: 10,
-                                    transaction: .income),
+                                    type: .income),
                         Transaction(description: "Coffe",
                                     date: "30/05/2022".toDate(),
                                     amount: 7,
-                                    transaction: .income)
+                                    type: .income)
                     ]
                 )
             ],

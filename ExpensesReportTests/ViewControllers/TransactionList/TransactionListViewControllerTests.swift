@@ -10,7 +10,7 @@ import XCTest
 class TransactionListViewControllerTests: XCTestCase {
 
     func testViewControllerCreation() throws {
-        let mockViewModel = TransactionListViewModelMock()
+        let mockViewModel = TransactionListViewModelMock(withDB: DataBaseMockImp())
         let viewController = TransactionListViewController(withViewModel: mockViewModel)
         _ = viewController.view
 
