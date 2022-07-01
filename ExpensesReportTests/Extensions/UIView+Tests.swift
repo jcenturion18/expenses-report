@@ -10,6 +10,8 @@ import UIKit
 extension UIView {
 
     static func loadNib() -> Self {
-        Bundle.main.loadNibNamed("\(Self.self)", owner: nil, options: nil)?.first as! Self // swiftlint:disable:this force_cast
+        Bundle.main.loadNibNamed("\(Self.self)",
+                                 owner: nil,
+                                 options: nil)?.first as! Self // swiftlint:disable:this force_cast
     }
 }
