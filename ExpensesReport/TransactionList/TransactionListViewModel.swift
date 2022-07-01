@@ -12,7 +12,8 @@ protocol TransactionListViewModel: AnyObject {
     init (withDB database: DataBase)
     func loadTransactionsData()
     func transactionCreated(_ transaction: Transaction)
-    func deleteTransaction(at indexPath: IndexPath)
+    func transaction(for indexPath: IndexPath) -> Transaction
+    func delete(transaction: Transaction)
 }
 
 class TransactionListViewModelImp: TransactionListViewModel {
@@ -48,10 +49,12 @@ class TransactionListViewModelImp: TransactionListViewModel {
         return TransactionListData(transactions: transactions.toTransactionsByDayArray(), summary: summary)
     }
 
-    func deleteTransaction(at indexPath: IndexPath) {
-        database.delete(transaction:
-                            transactionListData.transactions[indexPath.section].transactions[indexPath.row - 1]
-        )
+    func transaction(for indexPath: IndexPath) -> Transaction {
+        transactionListData.transactions[indexPath.section].transactions[indexPath.row - 1]
+    }
+
+    func delete(transaction: Transaction) {
+        database.delete(transaction: transaction)
     }
 
     func transactionCreated(_ transaction: Transaction) {
